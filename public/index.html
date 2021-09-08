@@ -18,12 +18,52 @@
     integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
     crossorigin="anonymous"></script>
 <script src="https://unpkg.com/vue@next"></script>
+<style>
+
+  #table {
+
+      margin:0 auto;
+      border-collapse: collapse;
+      border: 3px solid #ccc;
+
+  }
+
+  #table td {
+
+      border:1px solid #ccc;
+      height: 80px;
+      width: 80px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 75px;
+      cursor: pointer;
+
+  }
+
+</style>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <div id="app">
+
+      <table id="table">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+    
+</body>
 </html>

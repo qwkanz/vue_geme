@@ -1,21 +1,6 @@
 <template>
   <div class="container">
-    <!-- <HelloWorld
-      title="Hello"
-      message="*これは、Vue3のサンプルプロジェクトです。"
-      comment ="こんにちわ"
-    />
-   
-    <GoodBye
-      title="GoodBye"
-      message="*これは、Vue3のサンプルプロジェクトです。"
-      comment ="さようなら"
-    />
-    <Thankyou
-      title="Thankyou"
-      message="*これは、Vue3のサンプルプロジェクトです。"
-      comment ="ありがとう"
-    /> -->
+ 
     <Mondai class="board" title="問題" v-bind:message="mondai" />
 
     <Answer class="kaitou" answer="不正解" v-bind:message="kotae.A" />

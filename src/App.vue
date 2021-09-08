@@ -32,6 +32,7 @@
 .kaitou{
   width: 500px;
   background-color:lightpink;
+  margin-left: 100px;
   
   
 }

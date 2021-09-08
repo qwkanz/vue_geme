@@ -1,26 +1,67 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+  <div class="container">
+    <!-- <HelloWorld
+      title="Hello"
+      message="*これは、Vue3のサンプルプロジェクトです。"
+      comment ="こんにちわ"
+    />
+   
+    <GoodBye
+      title="GoodBye"
+      message="*これは、Vue3のサンプルプロジェクトです。"
+      comment ="さようなら"
+    />
+    <Thankyou
+      title="Thankyou"
+      message="*これは、Vue3のサンプルプロジェクトです。"
+      comment ="ありがとう"
+    /> -->
+    <Mondai class="board" title="問題" v-bind:message="mondai" />
 
+    <Answer class="kaitou" answer="不正解" v-bind:message="kotae.A" />
+    <Answer class="kaitou" answer="不正解" v-bind:message="kotae.B" />
+    <Answer class="kaitou" answer="不正解" v-bind:message="kotae.C" />
+    <Answer class="kaitou" answer="正解" v-bind:message="kotae.D" />
+  </div>
+</template>
+      <style >
+.board{
+  width: 700px;
+  text-align: center;
+}
+.kaitou{
+  width: 500px;
+  background-color:lightpink;
+  
+  
+}
+
+</style>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Mondai from "./components/Mondai.vue";
+import Answer from "./components/Answer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
-</script>
+    // HelloWorld,
+    // GoodBye,
+    // Thankyou,
+    Mondai,
+    Answer,
+  },
+  data() {
+    return {
+      mondai: "奈良で一番高い山は？",
+      kotae:{
+        A:"A:若草山",
+        B:"B:葛城山",
+        C:"C:国見山",
+        D:"D:八経ヶ岳"
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+      }
+    };
+  },
+};
+</script>
